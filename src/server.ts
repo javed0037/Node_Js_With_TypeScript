@@ -34,10 +34,12 @@ app.use(UserRoute.routes())
 
 
 
-app.listen(config.Port, async ()=>{
+const server = app.listen(config.Port, async ()=>{
     console.log('app is running on the port',config.Port);
     
 }).on('error',(err)=>{
     console.log('eror',err);
     
 });
+
+export default server;
